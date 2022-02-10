@@ -25,11 +25,12 @@ cors_proxy.createServer({
   // originWhitelist: originWhitelist,
   originWhitelist: [
     "http://localhost:3000",
+    "https://localhost:44394",
     "http://localhost:3001",
-    "https://hepsiotoemlak.com/",
-],
+    "https://hepsiotoemlak.com",
+  ],
   requireHeader: ['origin', 'x-requested-with'],
-  checkRateLimit: checkRateLimit,
+  // checkRateLimit: checkRateLimit,
   removeHeaders: [
     'cookie',
     'cookie2',
@@ -49,6 +50,6 @@ cors_proxy.createServer({
     // Do not add X-Forwarded-For, etc. headers, because Heroku already adds it.
     xfwd: false,
   },
-}).listen(port, host, function() {
+}).listen(port, host, function () {
   console.log('Running CORS Anywhere on ' + host + ':' + port);
 });
