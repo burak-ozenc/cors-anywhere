@@ -1,5 +1,5 @@
 // Listen on a specific host via the HOST environment variable
-var host = process.env.HOST || '127.0.0.1';
+var host = process.env.HOST || '0.0.0.0';
 // Listen on a specific port via the PORT environment variable
 var port = process.env.PORT || 8080;
 
@@ -25,7 +25,7 @@ cors_proxy.createServer({
   // originWhitelist: originWhitelist,
   originWhitelist: [
     "http://localhost:3000",
-    "https://localhost:44394",
+    "https://localhost:44373",
     "http://localhost:3001",
     "https://hepsiotoemlak.com",
   ],
